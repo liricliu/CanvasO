@@ -202,12 +202,14 @@ void sideBar::selectUpLayer(){
     Shape* selectedShape=((mainWin*)parent())->getShape();
     selectedShape->selectNext();
     ((mainWin*)parent())->getCanvas()->repaint();
+    updateDataInLineEdit();
     repaint();
 }
 void sideBar::selectDownLayer(){
     Shape* selectedShape=((mainWin*)parent())->getShape();
     selectedShape->selectLast();
     ((mainWin*)parent())->getCanvas()->repaint();
+    updateDataInLineEdit();
     repaint();
 }
 void sideBar::deleteShape(){
